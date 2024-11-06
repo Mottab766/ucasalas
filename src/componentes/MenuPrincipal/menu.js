@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { FaBars } from 'react-icons/fa'; // Ícone de menu hamburguer
 import logo from '../MenuPrincipal/logo.png';
 
 const Container = styled.div`
@@ -10,6 +11,14 @@ const Container = styled.div`
   padding: 0 20px;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 600px) {
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+    height: 5rem;
+    padding: 0 10px;
+  }
 `;
 
 const Menulogo = styled.div`
@@ -21,11 +30,27 @@ const Menulogo = styled.div`
 const Logo = styled.img`
   width: 25rem;
   height: auto;
+
+  @media (max-width: 600px) {
+    width: 10rem; /* Ajusta o tamanho do logo em telas menores */
+  }
 `;
 
 const MenuContainer = styled.div`
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
+
+  @media (max-width: 600px) {
+    display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')}; /* Exibe o menu hamburguer ao clicar */
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 10px;
+  }
 `;
 
 const MenuItem = styled.div`
@@ -37,6 +62,10 @@ const MenuItem = styled.div`
   
   &:hover {
     color: #000;
+  }
+
+  @media (max-width: 600px) {
+    padding: 15px; /* Reduz o espaçamento dos itens em telas menores */
   }
 `;
 
@@ -51,6 +80,12 @@ const Dropdown = styled.div`
   display: ${(props) => (props.show ? 'block' : 'none')};
   z-index: 1;
   width: 8rem;
+
+  @media (max-width: 600px) {
+    position: static;
+    box-shadow: none;
+    width: 100%;
+  }
 `;
 
 const DropdownItem = styled.div`
@@ -69,8 +104,18 @@ const DropdownItem = styled.div`
   }
 `;
 
+const HamburgerIcon = styled.div`
+  display: none;
+  cursor: pointer;
+
+  @media (max-width: 600px) {
+    display: flex;
+  }
+`;
+
 function Menuprincipal() {
   const [activeMenu, setActiveMenu] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleMouseEnter = (menu) => {
     setActiveMenu(menu);
@@ -96,8 +141,12 @@ function Menuprincipal() {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' }); // Rolagem suave
+      element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
@@ -105,7 +154,12 @@ function Menuprincipal() {
       <Menulogo>
         <Logo src={logo} alt="Logo Uca" />
       </Menulogo>
-      <MenuContainer>
+
+      <HamburgerIcon onClick={toggleMenu}>
+        <FaBars size={24} />
+      </HamburgerIcon>
+
+      <MenuContainer isOpen={menuOpen}>
         <MenuItem
           className="menu-item"
           onMouseEnter={() => handleMouseEnter('terreo')}
@@ -141,11 +195,11 @@ function Menuprincipal() {
           2º Andar
           {activeMenu === '2andar' && (
             <Dropdown show>
-              <DropdownItem onClick={() => scrollToSection('6')}> clarice Lispector</DropdownItem>
-              <DropdownItem onClick={() => scrollToSection('7')}> Dandara dos Palmares</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('6')}>Clarice Lispector</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('7')}>Dandara dos Palmares</DropdownItem>
               <DropdownItem onClick={() => scrollToSection('8')}>Cacique Raoni Metuktire</DropdownItem>
               <DropdownItem onClick={() => scrollToSection('9')}>Oswaldo Cruz</DropdownItem>
-              <DropdownItem onClick={() => scrollToSection('10')}>Paulo freire</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('10')}>Paulo Freire</DropdownItem>
               <DropdownItem onClick={() => scrollToSection('11')}>Carlos Chagas</DropdownItem>
             </Dropdown>
           )}
@@ -164,8 +218,8 @@ function Menuprincipal() {
               <DropdownItem onClick={() => scrollToSection('15')}>Tom Jobim</DropdownItem>
             </Dropdown>
           )}
-        </MenuItem>   
-        </MenuContainer>
+        </MenuItem>
+      </MenuContainer>
     </Container>
   );
 }
