@@ -36,6 +36,7 @@ const Dados = styled.div`
 display:flex;
 flex-direction:column;
 align-items: center;
+margin-top:2px;
 `
 
 const Nome = styled.a`
