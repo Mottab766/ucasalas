@@ -39,26 +39,29 @@ margin-top: 2rem;
 `;
 
 const Resumo = styled.div`
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
-  color: #fff;
-  transform: translateX(-20%); /* Inicialmente escondido à esquerda */
-  transition: transform 1s ease-in-out;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 20rem;
-  height: 20rem;
-  border-radius: 30%;
-  margin-top: 2rem;
-  opacity: 0; 
+position: absolute;
+background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+color: #fff;
+transform: translateX(-20%); /* Inicialmente escondido à esquerda */
+transition: transform 1s ease-in-out;
+display:flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+width: 19.3rem;
+height: 20rem;
+border-radius: 30%;
+margin-top: 2rem;
+opacity: 0; 
+padding-left:7px;
+padding-right:7px;
+
 
 `;
 
 const PersonagemComHover = styled(Personagem)`
   &:hover ${Imagem} {
-    transform: scale(1.05); /* Efeito de zoom suave */
+    transform: scale(1); /* Efeito de zoom suave */
     opacity: 1; 
   }
 
