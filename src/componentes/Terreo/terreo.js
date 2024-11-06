@@ -32,6 +32,36 @@ margin-top: 2rem;
   border-radius: 30%;
 `;
 
+const Resumo = styled.div`
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+  color: #fff;
+  transform: translateX(-20%); /* Inicialmente escondido à esquerda */
+  transition: transform 1s ease-in-out;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 30%;
+  margin-top: 2rem;
+  opacity: 0; 
+
+`;
+
+const PersonagemComHover = styled(Personagem)`
+  &:hover ${Imagem} {
+    transform: scale(1.05); /* Efeito de zoom suave */
+    opacity: 1; 
+  }
+
+  &:hover ${Resumo} {
+    transform: translateX(0); /* Mostra o resumo quando passa o mouse */
+    opacity: 10; 
+  }
+`;
+
 const Dados = styled.div`
 display:flex;
 flex-direction:column;
@@ -81,7 +111,7 @@ function Terreo () {
             </Banner>
             <Personagens>
             {PersonasTerreo.map((personagem, index) => (
-          <Personagem key={index}>
+          <PersonagemComHover key={index}>
             <Dados>
             <Imagem id={personagem.id_Persona} src={personagem.imagem} alt={personagem.name} />
             <Nome>{personagem.name}</Nome>
@@ -92,7 +122,8 @@ function Terreo () {
             <CafeTarde>{personagem.cafetarde}</CafeTarde>
             <Link>{personagem.link}</Link>
             </Dados>
-          </Personagem>
+            <Resumo>{personagem.Resumopersona}</Resumo> {/* Exibe o resumo ao passar o mouse */}
+          </PersonagemComHover>
         ))}
             </Personagens>
         </TerreoSalas>
