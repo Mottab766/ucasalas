@@ -19,13 +19,13 @@ width: 50%;
 justify-content: space-around;
 `;
 
-const Titulo = styled.h3``
+const Titulo = styled.h4``
 
 const Dados = styled.div`
 display: flex;
 flex-direction: column;
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
 `;
 
 const Sites = styled.a`
