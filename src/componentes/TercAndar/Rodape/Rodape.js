@@ -31,6 +31,7 @@ flex-direction: column;
 const Sites = styled.a`
   color: #fff;
   text-decoration: none; /* Adicionei para remover o sublinhado do link */
+  margin-bottom: 3px;
 `;
 
 function Rodape() {
