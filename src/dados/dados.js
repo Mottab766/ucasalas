@@ -26,7 +26,7 @@ export const PersonasTerreo = [
         cafe: "Café da Manhã: 10:30",
         almoco: "Almoço: 12:30",
         cafetarde: "Café da Tarde: 15:30",
-        Resumopersona: "Ayrton Senna (1960-1994) foi um dos maiores pilotos de Fórmula 1, vencedor de três campeonatos mundiais e reconhecido por sua habilidade e velocidade, especialmente em condições adversas. Além de inspirar fãs, ele fundou o Instituto Ayrton Senna para apoiar a educação no Brasil. Sua morte trágica em 1994 o transformou em um símbolo de perseverança e superação no esporte."
+        Resumopersona: "Ayrton Senna (1960-1994) foi um dos maiores pilotos de Fórmula 1, vencedor de três campeonatos mundiais e reconhecido por sua habilidade e velocidade, especialmente em condições adversas. Sua morte trágica em 1994 o transformou em um símbolo de perseverança e superação no esporte."
     },
     {
         id_Persona: 2,
@@ -37,7 +37,7 @@ export const PersonasTerreo = [
         cafe: "",
         almoco: "",
         cafetarde: "",
-        Resumopersona: "Lélia Gonzalez (1935-1994) foi uma intelectual, filósofa, antropóloga e ativista brasileira, reconhecida por sua atuação no movimento negro e feminista. Com raízes afro-indígenas, foi pioneira na luta contra o racismo estrutural e na valorização da cultura afro-brasileira. Fundadora do Movimento Negro Unificado e do Coletivo de Mulheres Negras, sua obra crítica sobre opressão de raça e gênero inspira até hoje novas gerações de ativistas."
+        Resumopersona: "Lélia Gonzalez (1935-1994) foi uma intelectual, filósofa, antropóloga e ativista brasileira, reconhecida por sua atuação no movimento negro e feminista. Com raízes afro-indígenas, foi pioneira na luta contra o racismo estrutural e na valorização da cultura afro-brasileira."
     },
     {
         id_Persona: 3,
@@ -48,7 +48,7 @@ export const PersonasTerreo = [
         cafe: "",
         almoco: "",
         cafetarde: "",
-        Resumopersona: "Heitor Villa-Lobos (1887-1959) é reconhecido como o maior compositor brasileiro de música clássica, conhecido por integrar a tradição europeia com elementos da música popular e folclórica do Brasil, como nas obras Bachianas Brasileiras e Choros. Ele viajou pelo país pesquisando ritmos e canções populares e também contribuiu para a educação musical no Brasil. Sua obra é uma expressão cultural significativa do Brasil no cenário mundial."
+        Resumopersona: "Heitor Villa-Lobos (1887-1959) é reconhecido como o maior compositor brasileiro de música clássica, conhecido por integrar a tradição europeia com elementos da música popular e folclórica do Brasil."
     }
 ]
 
