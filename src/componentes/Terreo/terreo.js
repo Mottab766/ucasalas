@@ -42,17 +42,20 @@ const Resumo = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 20rem;
+  width: 19.3rem;
   height: 20rem;
   border-radius: 30%;
   margin-top: 2rem;
   opacity: 0; 
+  padding-left:7px;
+  padding-right:7px;
+
 
 `;
 
 const PersonagemComHover = styled(Personagem)`
   &:hover ${Imagem} {
-    transform: scale(1.05); /* Efeito de zoom suave */
+    transform: scale(1); /* Efeito de zoom suave */
     opacity: 1; 
   }
 
