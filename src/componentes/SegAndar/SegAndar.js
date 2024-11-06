@@ -16,27 +16,26 @@ color: #fff;
 font-size: 3rem`
 
 const Personagens = styled.div`
-display:flex;
-justify-content:space-around;
-flex-direction:row;
-flex-wrap:wrap;`
-
+display: flex;
+justify-content: space-around;
+flex-direction: row;
+flex-flow:wrap;
+`
 const Personagem = styled.div`
 display:flex;
 flex-direction:column;
-margin-left:2rem;
-margin-right:2rem;
+margin-left:3rem;
+margin-right:3rem;
+align-items: center;
 position: relative; /* Adicionar para controlar a posição do resumo */
 `
 
 
 const Imagem = styled.img`
-margin-top: 2rem;
+  margin-top: 2rem;
   width: 20rem;
   height: 20rem;
   border-radius: 30%;
-  transition: transform 0.1s ease-in-out; /* Transição para o efeito de hover */
-
 `;
 
 const Resumo = styled.div`
@@ -56,19 +55,13 @@ margin-top: 2rem;
 opacity: 0; 
 padding-left:7px;
 padding-right:7px;
-
-
+flex-flow:wrap;
 `;
 
 const PersonagemComHover = styled(Personagem)`
-  &:hover ${Imagem} {
-    transform: scale(1); /* Efeito de zoom suave */
-    opacity: 1; 
-  }
-
   &:hover ${Resumo} {
     transform: translateX(0); /* Mostra o resumo quando passa o mouse */
-    opacity: 10; 
+    opacity: 1; 
   }
 `;
 
@@ -124,7 +117,7 @@ function AndarSeg () {
             {Personas2andar.map((personagem, index) => (
               <PersonagemComHover key={index}>
             <Dados>
-            <Imagem id={personagem.id_Persona} src={personagem.imagem} alt={personagem.name} />
+            <Imagem id={personagem.id_Persona} src={personagem.imagem} alt={personagem.name}/>
             <Nome>{personagem.name}</Nome>
             <Descricao><strong>{personagem.desc}</strong></Descricao>
             <Quantidade>{personagem.quantidade}</Quantidade>
