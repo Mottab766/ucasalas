@@ -93,6 +93,13 @@ function Menuprincipal() {
     };
   }, []);
 
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' }); // Rolagem suave
+    }
+  };
+
   return (
     <Container>
       <Menulogo>
@@ -108,9 +115,9 @@ function Menuprincipal() {
           Térreo
           {activeMenu === 'terreo' && (
             <Dropdown show>
-              <DropdownItem> Ayrton Senna</DropdownItem>
-              <DropdownItem> Lélia Gonzalez</DropdownItem>
-              <DropdownItem> Heitor Villa-Lobos</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('1')}>Ayrton Senna</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('2')}>Lélia Gonzalez</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('3')}>Heitor Villa-Lobos</DropdownItem>
             </Dropdown>
           )}
         </MenuItem>
@@ -122,12 +129,12 @@ function Menuprincipal() {
           1º Andar
           {activeMenu === '1andar' && (
             <Dropdown show>
-              <DropdownItem> Sala de operações</DropdownItem>
-              <DropdownItem> loja modelo</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('4')}>Sala de operações</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('5')}>Loja modelo</DropdownItem>
             </Dropdown>
-          )}        
-          </MenuItem>
-         <MenuItem
+          )}
+        </MenuItem>
+        <MenuItem
           className="menu-item"
           onMouseEnter={() => handleMouseEnter('2andar')}
           onMouseLeave={handleMouseLeave}
@@ -135,12 +142,12 @@ function Menuprincipal() {
           2º Andar
           {activeMenu === '2andar' && (
             <Dropdown show>
-              <DropdownItem> clarice Lispector</DropdownItem>
-              <DropdownItem> Dandara dos Palmares</DropdownItem>
-              <DropdownItem>Cacique Raoni Metuktire</DropdownItem>
-              <DropdownItem>Oswaldo Cruz</DropdownItem>
-              <DropdownItem>Paulo freire</DropdownItem>
-              <DropdownItem>Carlos Chagas</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('6')}> clarice Lispector</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('7')}> Dandara dos Palmares</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('8')}>Cacique Raoni Metuktire</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('9')}>Oswaldo Cruz</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('10')}>Paulo freire</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('11')}>Carlos Chagas</DropdownItem>
             </Dropdown>
           )}
         </MenuItem>
@@ -152,14 +159,14 @@ function Menuprincipal() {
           3º Andar
           {activeMenu === '3andar' && (
             <Dropdown show>
-              <DropdownItem>Tarsila do Amaral</DropdownItem>
-              <DropdownItem>Santos Dumont</DropdownItem>
-              <DropdownItem>Vinícius de Moraes</DropdownItem>
-              <DropdownItem>Tom Jobim</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('12')}>Tarsila do Amaral</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('13')}>Santos Dumont</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('14')}>Vinícius de Moraes</DropdownItem>
+              <DropdownItem onClick={() => scrollToSection('15')}>Tom Jobim</DropdownItem>
             </Dropdown>
           )}
-        </MenuItem>
-      </MenuContainer>
+        </MenuItem>   
+        </MenuContainer>
     </Container>
   );
 }
