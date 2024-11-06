@@ -30,6 +30,7 @@ display:flex;
 justify-content:space-around;
 
 @media (max-width: 768px) {
+  flex-direction: row;
   justify-content: center; /* Centraliza os personagens em telas pequenas */
   flex-wrap: wrap; 
   align-itens:center;
@@ -39,14 +40,14 @@ justify-content:space-around;
 const Personagem = styled.div`
 display:flex;
 flex-direction:column;
+position: relative; /* Para controlar a posição do resumo */
 
 @media (max-width: 768px) {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width:  70%; /* Ocupa toda a largura da tela em dispositivos pequenos */
   height:  70%; /* Ocupa toda a largura da tela em dispositivos pequenos */
-  margin-left: 0; /* Reduz o espaço entre os personagens */
-  margin-right: 0; /* Reduz o espaço entre os personagens */
 
 }
 `
