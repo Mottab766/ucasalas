@@ -166,10 +166,10 @@ export const Personas3andar = [
         imagem: SantosdumontImg,
         name: "Santos Dumont",
         desc: "Sala de Aula",
-        quantidade: "Quantidade de Alunos(as): ",
-        cafe: "Café da Manhã:",
-        almoco: "Almoço:",
-        cafetarde:"Café da Tarde:",
+        quantidade: "Quantidade de Alunos(as): 12",
+        cafe: "Café da Manhã: 10:00",
+        almoco: "Almoço: 12:00",
+        cafetarde:"Café da Tarde: 15:00",
         link:""
     },
     {
@@ -177,10 +177,10 @@ export const Personas3andar = [
         imagem: ViniciusdeMoraesImg,
         name: "Vinícius de Moraes",
         desc: "Sala de Aula",
-        quantidade: "Quantidade de Alunos(as):",
-        cafe: "Café da Manhã:",
-        almoco: "Almoço:",
-        cafetarde:"Café da Tarde:",
+        quantidade: "Quantidade de Alunos(as): 10",
+        cafe: "Café da Manhã: 09:30",
+        almoco: "Almoço: 11:30",
+        cafetarde:"Café da Tarde: 14:30",
         link:""
     },
     {
