@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Meubanner from './componentes/Banner/Banner';
+import Menuprincipal from './componentes/MenuPrincipal/menu';
+import AndarPrim from './componentes/PrimAndar/PrimAndar';
+import AndarSeg from './componentes/SegAndar/SegAndar';
+import Rodape from './componentes/TercAndar/Rodape/Rodape';
+import AndarTerc from './componentes/TercAndar/TercAndar';
+import Terreo from './componentes/Terreo/terreo';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menuprincipal />
+      <Meubanner/>
+      <Terreo/>
+      <AndarPrim/>
+      <AndarSeg/>
+      <AndarTerc/>
+      <Rodape/>
     </div>
   );
 }
