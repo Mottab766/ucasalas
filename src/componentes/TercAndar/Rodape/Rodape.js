@@ -4,7 +4,7 @@ import { RodapeInformacoes } from '../../../dados/dados';
 const Rodapedados = styled.div`
 display: flex;
 justify-content: center;
-height: 10rem;
+height: 8rem;
 width: 100%;
 flex-direction: row;
 background-color: #480078;
