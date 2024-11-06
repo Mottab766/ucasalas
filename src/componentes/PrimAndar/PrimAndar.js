@@ -27,6 +27,7 @@ const Personagens = styled.div`
 const Personagem = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative; /* Adicionar para controlar a posição do resumo */
 `;
 
@@ -49,7 +50,7 @@ align-items: center;
 justify-content: center;
 text-align: center;
 width: 19.3rem;
-height: 20rem;
+height: 20.2rem;
 border-radius: 30%;
 margin-top: 2rem;
 opacity: 0; 
