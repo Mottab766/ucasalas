@@ -113,7 +113,7 @@ export const Personas2andar = [
         cafetarde: "Café da Tarde: 14:30",
         Resumopersona: "Cacique Raoni Metuktire, líder indígena Kayapó, é reconhecido mundialmente pela defesa dos direitos dos povos indígenas e pela preservação da Amazônia."
     },
-    {
+    /*{
         id_Persona: 9,
         imagem: OswaldoImg,
         name: "Oswaldo Cruz",
@@ -134,7 +134,7 @@ export const Personas2andar = [
         almoco: "",
         cafetarde: "",
         Resumopersona: "Paulo Freire (1921-1997) foi um educador e filósofo brasileiro, reconhecido mundialmente por sua pedagogia libertadora. Em sua obra Pedagogia do Oprimido, ele propôs uma metodologia que valoriza o diálogo e a participação ativa dos alunos."
-    },
+    },*/
     {
         id_Persona: 11,
         imagem: CarloschagasImg,
