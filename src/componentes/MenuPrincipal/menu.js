@@ -106,7 +106,6 @@ function Menuprincipal() {
         <Logo src={logo} alt="Logo Uca" />
       </Menulogo>
       <MenuContainer>
-        <MenuItem active>Início</MenuItem>
         <MenuItem
           className="menu-item"
           onMouseEnter={() => handleMouseEnter('terreo')}
