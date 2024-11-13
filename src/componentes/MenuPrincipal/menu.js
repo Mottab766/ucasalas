@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa'; // Ícone de menu hamburguer
 import logo from '../MenuPrincipal/logo.png';
+import { Link } from 'react-router-dom'; // Importe o Link
+
 
 const Container = styled.div`
   display: flex;
@@ -158,8 +160,13 @@ function Menuprincipal() {
       <HamburgerIcon onClick={toggleMenu}>
         <FaBars size={24} />
       </HamburgerIcon>
-
       <MenuContainer isOpen={menuOpen}>
+      <MenuItem
+          className="menu-item"
+          onMouseEnter={() => handleMouseEnter('Inicio')}
+          onMouseLeave={handleMouseLeave}
+        >
+        <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Inicio</Link> </MenuItem>
         <MenuItem
           className="menu-item"
           onMouseEnter={() => handleMouseEnter('terreo')}
@@ -168,9 +175,9 @@ function Menuprincipal() {
           Térreo
           {activeMenu === 'terreo' && (
             <Dropdown show>
-              <DropdownItem onClick={() => scrollToSection('1')}>Ayrton Senna</DropdownItem>
-              <DropdownItem onClick={() => scrollToSection('2')}>Lélia Gonzalez</DropdownItem>
-              <DropdownItem onClick={() => scrollToSection('3')}>Heitor Villa-Lobos</DropdownItem>
+              <DropdownItem><Link to="/Senna" style={{ color: 'inherit', textDecoration: 'none' }}>Ayrton Senna</Link></DropdownItem>
+              <DropdownItem ><Link to="/Lelia" style={{ color: 'inherit', textDecoration: 'none' }}>Lélia Gonzalez</Link></DropdownItem>
+              <DropdownItem ><Link to="/Heitor" style={{ color: 'inherit', textDecoration: 'none' }}>Heitor Villa-Lobos</Link></DropdownItem>
             </Dropdown>
           )}
         </MenuItem>
@@ -182,8 +189,8 @@ function Menuprincipal() {
           1º Andar
           {activeMenu === '1andar' && (
             <Dropdown show>
-              <DropdownItem onClick={() => scrollToSection('4')}>Sala de operações</DropdownItem>
-              <DropdownItem onClick={() => scrollToSection('5')}>Loja modelo</DropdownItem>
+              <DropdownItem ><Link to="/SalaOperacoes" style={{ color: 'inherit', textDecoration: 'none' }}>Sala de operações</Link></DropdownItem>
+              <DropdownItem ><Link to="/LojaModelo" style={{ color: 'inherit', textDecoration: 'none' }}>Loja modelo</Link></DropdownItem>
             </Dropdown>
           )}
         </MenuItem>
@@ -195,12 +202,12 @@ function Menuprincipal() {
           2º Andar
           {activeMenu === '2andar' && (
             <Dropdown show>
-              <DropdownItem onClick={() => scrollToSection('6')}>Clarice Lispector</DropdownItem>
-              <DropdownItem onClick={() => scrollToSection('7')}>Dandara dos Palmares</DropdownItem>
-              <DropdownItem onClick={() => scrollToSection('8')}>Cacique Raoni Metuktire</DropdownItem>
-              <DropdownItem onClick={() => scrollToSection('9')}>Oswaldo Cruz</DropdownItem>
-              <DropdownItem onClick={() => scrollToSection('10')}>Paulo Freire</DropdownItem>
-              <DropdownItem onClick={() => scrollToSection('11')}>Carlos Chagas</DropdownItem>
+              <DropdownItem><Link to="/Clarice" style={{ color: 'inherit', textDecoration: 'none' }}>Clarice Lispector</Link></DropdownItem>
+              <DropdownItem><Link to="/Dandara" style={{ color: 'inherit', textDecoration: 'none' }}>Dandara dos Palmares</Link></DropdownItem>
+              <DropdownItem><Link to="/Cacique" style={{ color: 'inherit', textDecoration: 'none' }}>Cacique Raoni Metuktire</Link></DropdownItem>
+              <DropdownItem>Oswaldo Cruz</DropdownItem>
+              <DropdownItem>Paulo Freire</DropdownItem>
+              <DropdownItem><Link to="/CarlosChagas" style={{ color: 'inherit', textDecoration: 'none' }}>Carlos Chagas</Link></DropdownItem>
             </Dropdown>
           )}
         </MenuItem>
@@ -212,10 +219,10 @@ function Menuprincipal() {
           3º Andar
           {activeMenu === '3andar' && (
             <Dropdown show>
-              <DropdownItem onClick={() => scrollToSection('12')}>Tarsila do Amaral</DropdownItem>
-              <DropdownItem onClick={() => scrollToSection('13')}>Santos Dumont</DropdownItem>
-              <DropdownItem onClick={() => scrollToSection('14')}>Vinícius de Moraes</DropdownItem>
-              <DropdownItem onClick={() => scrollToSection('15')}>Tom Jobim</DropdownItem>
+              <DropdownItem><Link to="/Tarsila" style={{ color: 'inherit', textDecoration: 'none' }}>Tarsila do Amaral</Link></DropdownItem>
+              <DropdownItem><Link to="/SantosDumont" style={{ color: 'inherit', textDecoration: 'none' }}>Santos Dumont</Link></DropdownItem>
+              <DropdownItem><Link to="/ViniciusDeMoraes" style={{ color: 'inherit', textDecoration: 'none' }}>Vinícius de Moraes</Link></DropdownItem>
+              <DropdownItem><Link to="/TomJobim" style={{ color: 'inherit', textDecoration: 'none' }}>Tom Jobim</Link></DropdownItem>
             </Dropdown>
           )}
         </MenuItem>

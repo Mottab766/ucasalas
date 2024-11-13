@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { Personas1andar } from '../../../src/dados/dados';
+import { Link } from 'react-router-dom'; // Importe o Link do react-router-dom
+
 
 // Estilos principais
 const TerreoSalas = styled.div`
@@ -22,7 +24,7 @@ height: 6rem;
 
 const Titulo = styled.h2`
 color: #fff;
-font-size: 3rem
+font-size: 3rem;
 
 @media (max-width: 768px) {
   font-size: 2rem; /* Reduz o tamanho do título em telas pequenas */
@@ -123,7 +125,7 @@ const Dados = styled.div`
   }
 `
 
-const Nome = styled.a`
+const Nome = styled(Link)`
   font-size: 2rem;
   color: #333;
 
@@ -177,15 +179,6 @@ const CafeTarde = styled.p`
   }
 `
 
-const Link = styled.p`
-  font-size: 0.9rem;
-  color: #333;
-
-  @media (max-width: 768px) {
-    font-size: 0.8rem; /* Reduz o tamanho da fonte do link */
-  }
-`
-
 function AndarPrim() {
   return (
     <TerreoSalas>
@@ -197,7 +190,7 @@ function AndarPrim() {
           <PersonagemComHover key={index}>
             <Dados>
               <Imagem id={personagem.id_Persona} src={personagem.imagem} alt={personagem.name} />
-              <Nome>{personagem.name}</Nome>
+              <Nome id={personagem.id_Persona} to={personagem.Link}>{personagem.name}</Nome>
               <Descricao><strong>{personagem.desc}</strong></Descricao>
               <Quantidade>{personagem.quantidade}</Quantidade>
               <CafeManha>{personagem.cafe}</CafeManha>

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {Personas3andar} from '../../../src/dados/dados'
+import { Link } from 'react-router-dom'; // Importe o Link do react-router-dom
 
 const TerreoSalas = styled.div``
 
@@ -19,8 +20,7 @@ height: 6rem;
 
 const Titulo = styled.h2`
 color: #fff;
-font-size: 3rem
-
+font-size: 3rem;
 @media (max-width: 768px) {
   font-size: 2rem; /* Reduz o tamanho do título em telas pequenas */
 }`
@@ -28,6 +28,8 @@ font-size: 3rem
 const Personagens = styled.div`
 display:flex;
 justify-content:space-around;
+margin-left:8rem;
+margin-right:8rem;
 flex-direction:row;
 flex-wrap:wrap;
 
@@ -39,8 +41,8 @@ flex-wrap:wrap;
 const Personagem = styled.div`
 display:flex;
 flex-direction:column;
-margin-left:6rem;
-margin-right:6rem;
+margin-left:8rem;
+margin-right:8rem;
 align-items: center;
 position: relative; /* Adicionar para controlar a posição do resumo */
 
@@ -123,15 +125,14 @@ align-items: center;
   align-items: center;
 }`;
 
-const Nome = styled.a`
+const Nome = styled(Link)`
   font-size: 2rem;
   color: #333;
 
   @media (max-width: 768px) {
-    display:flex;
     font-size: 1.5rem; /* Reduz o tamanho da fonte do nome */
   }
-`;
+`
 
 const Descricao = styled.p`
   font-size: 0.9rem;
@@ -178,15 +179,6 @@ const CafeTarde = styled.p`
   }
 `;
 
-const Link = styled.p`
-  font-size: 0.9rem;
-  color: #333;
-
-  @media (max-width: 768px) {
-    font-size: 0.8rem; /* Reduz o tamanho da fonte do link */
-  }
-`;
-
 
 function AndarTerc () {
     return(
@@ -199,7 +191,7 @@ function AndarTerc () {
            <PersonagemComHover key={index}>
             <Dados>
             <Imagem  id={personagem.id_Persona} src={personagem.imagem} alt={personagem.name} />
-            <Nome>{personagem.name}</Nome>
+            <Nome id={personagem.id_Persona} to={personagem.Link}>{personagem.name}</Nome>
             <Descricao><strong>{personagem.desc}</strong></Descricao>
             <Quantidade>{personagem.quantidade}</Quantidade>
             <CafeManha>{personagem.cafe}</CafeManha>

@@ -1,32 +1,53 @@
 import styled from 'styled-components';
-import { RodapeInformacoes } from '../../../dados/dados';
+import { RodapeInformacoes } from '../../dados/dados';
 
 const Rodapedados = styled.div`
 display: flex;
 justify-content: center;
-height: 8rem;
+height: 11rem;
 width: 100%;
 flex-direction: row;
 background-color: #480078;
 padding-top: 1rem;
 padding-bottom: 1rem;
 
+@media (max-width: 600px) {
+  height: 15rem;
+  padding-top: 0;
+  width: 100%;
+  }
 `;
 
 const Plataformas = styled.div`
 display: flex;
 width: 50%;
 justify-content: space-around;
+
+@media (max-width: 600px) {
+  padding-top: 0;
+  width: 90%;
+  }
 `;
 
 const Titulo = styled.h4`
-font-size: 0.8rem;`
+font-size: 1.2rem;
+
+@media (max-width: 600px) {
+  font-size: 1rem;
+
+  }
+`;
 
 const Dados = styled.div`
 display: flex;
 flex-direction: column;
   color: #fff;
+  font-size: 0.9rem;
+
+  @media (max-width: 600px) {
   font-size: 0.8rem;
+  margin: 10px 10px 0;
+  }
 `;
 
 const Sites = styled.a`
@@ -34,7 +55,6 @@ const Sites = styled.a`
   text-decoration: none; /* Adicionei para remover o sublinhado do link */
   margin-top: 2px;
   margin-botton: 2px;
-
 `;
 
 function Rodape() {
