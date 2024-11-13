@@ -44,8 +44,8 @@ flex-flow:wrap;
 const Personagem = styled.div`
 display:flex;
 flex-direction:column;
-margin-left:6rem;
-margin-right:6rem;
+margin-left:5rem;
+margin-right:5rem;
 align-items: center;
 position: relative; /* Adicionar para controlar a posição do resumo */
 
