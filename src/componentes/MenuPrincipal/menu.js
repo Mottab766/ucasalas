@@ -52,6 +52,7 @@ const MenuContainer = styled.div`
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
     padding: 10px;
+    z-index: 1000; /* Adiciona o z-index alto */
   }
 `;
 
