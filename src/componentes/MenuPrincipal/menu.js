@@ -97,7 +97,7 @@ const DropdownItem = styled.div`
   padding: 5px 14px;
   cursor: pointer;
   color: #333;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
   
   &:hover {
     background-color: #f1f1f1;
@@ -106,7 +106,15 @@ const DropdownItem = styled.div`
   svg {
     margin-right: 8px;
   }
-`;
+  
+  &:after
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%; /* Define a largura da linha */
+  height: 1px; /* Define a espessura da linha */
+  background-color: rgba(0, 0, 0, 0.6); /* Define a cor com transparência de 60% */`;
 
 const HamburgerIcon = styled.div`
   display: none;
