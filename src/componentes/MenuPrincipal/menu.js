@@ -94,7 +94,7 @@ const Dropdown = styled.div`
 const DropdownItem = styled.div`
   display: flex;
   align-items: center;
-  padding: 5px 12px;
+  padding: 5px 14px;
   cursor: pointer;
   color: #333;
   
