@@ -97,23 +97,14 @@ const DropdownItem = styled.div`
   padding: 5px 14px;
   cursor: pointer;
   color: #333;
-  
+
   &:hover {
     background-color: #f1f1f1;
   }
   
   svg {
     margin-right: 8px;
-  }
-  
-  &:after
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60%; /* Define a largura da linha */
-  height: 0.3px; /* Define a espessura da linha */
-  background-color: rgba(0, 0, 0, 0.3); /* Define a cor com transparência de 60% */`;
+  }`;
 
 const HamburgerIcon = styled.div`
   display: none;
