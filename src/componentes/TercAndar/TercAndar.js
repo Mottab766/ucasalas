@@ -28,8 +28,8 @@ font-size: 3rem;
 const Personagens = styled.div`
 display:flex;
 justify-content:space-around;
-margin-left:8rem;
-margin-right:8rem;
+margin-left:4rem;
+margin-right:4rem;
 flex-direction:row;
 flex-wrap:wrap;
 
@@ -41,8 +41,8 @@ flex-wrap:wrap;
 const Personagem = styled.div`
 display:flex;
 flex-direction:column;
-margin-left:8rem;
-margin-right:8rem;
+margin-left:5rem;
+margin-right:5rem;
 align-items: center;
 position: relative; /* Adicionar para controlar a posição do resumo */
 
