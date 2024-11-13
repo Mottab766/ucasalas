@@ -79,7 +79,7 @@ const Dropdown = styled.div`
   background-color: white;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 10px;
+  padding: 11px;
   display: ${(props) => (props.show ? 'block' : 'none')};
   z-index: 1;
   width: 8rem;
