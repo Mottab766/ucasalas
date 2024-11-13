@@ -48,7 +48,6 @@ position: relative; /* Adicionar para controlar a posição do resumo */
 
 @media (max-width: 768px) {
   display: flex;
-  flex-flow:wrap;
   flex-direction: column;
   width:  70%; /* Ocupa toda a largura da tela em dispositivos pequenos */
   height:  70%; /* Ocupa toda a largura da tela em dispositivos pequenos */
