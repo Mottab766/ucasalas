@@ -26,6 +26,8 @@ justify-content: space-around;
 @media (max-width: 600px) {
   padding-top: 0;
   width: 90%;
+  height: 12rem;
+
   }
 `;
 
