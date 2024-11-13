@@ -30,8 +30,8 @@ font-size: 3rem;
 const Personagens = styled.div`
 display: flex;
 justify-content: space-around;
-margin-left:7rem;
-margin-right:7rem;
+margin-left:6rem;
+margin-right:6rem;
 flex-direction: row;
 flex-flow:wrap;
 
