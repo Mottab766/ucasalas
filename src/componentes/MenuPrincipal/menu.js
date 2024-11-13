@@ -97,7 +97,7 @@ const DropdownItem = styled.div`
   padding: 5px 12px;
   cursor: pointer;
   color: #333;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
   
   &:hover {
     background-color: #f1f1f1;
